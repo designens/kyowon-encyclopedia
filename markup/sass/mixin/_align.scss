@@ -1,0 +1,16 @@
+@mixin wh-center ($position: relative, $h-percent: 50%, $w-percent: 50%) {
+	position: $position;
+	top: $h-percent;
+	left: $w-percent;
+	transform: translate(-$h-percent, -$w-percent);
+}
+@mixin w-center ($position: relative, $w-percent: 50%) {
+	position: $position;
+	left: $w-percent;
+	transform: translateX(-$w-percent);
+}
+@mixin h-center ($position: relative, $h-percent: 50%) {
+	position: $position;
+	top: $h-percent;
+	transform: translateY(-$h-percent);
+}

@@ -47,3 +47,6 @@ node_modules
 
 #bower
 bower_components
+
+#디자인 시안
+resource/markup/psd
