@@ -2,458 +2,186 @@
 // 모바일_main
 // =======================================
 
-/* 상단 슬라이드 배너 */
-.swiper-top-slider {
-    position: relative;
-    overflow: hidden;
-    [class^="btn-"] {
-        width: 15px;
-        height: 35px;
-        z-index: 10;
-    }
-    @include susy-breakpoint(480px) {
-        [class^="btn-"] {
-            width: 30px;
-            height: 70px;
+/* 07-4.내책읽기, 07-5.내책읽기, 07-6.내책읽기 (07_read-my-book.html) */
+.cover-area {
+    width: 100%;
+    height: 100vh;
+    background: url("/assets/images/bg/cover-bg-01.png") center no-repeat;
+    background-size: cover;
+    .text-box {
+        height: 100vh;
+        padding: 95px 80px;
+        color: #fff;
+        .title {
+            font-family: $font-title-b;
         }
-    }
-    .btn-prev {
-        @include h-center($position: absolute);
-        left: 15px;
-        background: url("../images/svg/btn_prev.svg") no-repeat;
-        background-size: 100%;
-    }
-    .btn-next {
-        @include h-center($position: absolute);
-        right: 15px;
-        background: url("../images/svg/btn_next.svg") no-repeat;
-        background-size: 100%;
-    }
-    .swiper-wrapper {
-        .swiper-slide {
-            position: relative;
-            width: 100%;
-            img {
-                width: 100%;
-                height: auto;
-            }
-            .text-lable {
-                @include h-center($position: absolute);
-                left: 40px;
-                @include psd-fz(12px);
-                color: #fff;
-                text-shadow: hsla(0, 0%, 0%, 0.7) 0 0 3px;
-                h2 {
-                    letter-spacing: -0.04em;
-                    margin-bottom: 0;
-                }
-            }
-            @include susy-breakpoint(480px) {
-                .text-lable {
-                    left: 60px;
-                    @include psd-fz(14px);
-                }
+        .author {
+            font-size: rem(22px);
+            padding-top: 32px;
+            padding-bottom: 54px;
+        }
+        .contents {
+            width: 524px;
+            line-height: 50px;
+            span {
+                background: hsla(0, 0%, 0%, 0.2);
             }
         }
     }
 }
 
-/* 롤링 배너 */
-.swiper-rolling-slider {
-    position: relative;
-    padding-bottom: 38px;
-    border-bottom: 1px solid #e3e3e3;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    overflow: hidden;
-    .swiper-wrapper {
-        .swiper-slide {
-            position: relative;
-            .caption {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 80px;
-                height: 24px;
-                font-size: 10px;
-                color: #fff;
-                text-align: center;
-                text-shadow: hsla(0, 0%, 0%, 0.3) 0 0 3px;
-                line-height: 24px;
-            }
-            &:nth-of-type(1) {
-                .caption {
-                    background: #af67ff;
-                }
-            }
-            &:nth-of-type(2) {
-                .caption {
-                    background: #ffd234;
-                }
-            }
-            &:nth-of-type(3) {
-                .caption {
-                    background: #02b300;
-                }
-            }
-            &:nth-of-type(4) {
-                .caption {
-                    background: #00ade0;
-                }
-            }
-            img {
-                width: 100%;
-                height: auto;
-            }
-            .text-lable {
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                @include psd-fz(10px);
-                color: #fff;
-                text-align: center;
-                text-shadow: hsla(0, 0%, 0%, 0.3) 0 0 3px;
-                letter-spacing: -0.05em;
-                line-height: 1.4;
-                padding: 5px 0;
-            }
-            @include susy-breakpoint(480px) {
-                .text-lable {
-                    @include psd-fz(12px);
-                }
-            }
-             &:nth-of-type(1) {
-                .text-lable {
-                    background: hsla(268, 100%, 70%, 0.8);
-                }
-            }
-            &:nth-of-type(2) {
-                .text-lable {
-                    background: hsla(47, 100%, 60%, 0.8);
-                }
-            }
-            &:nth-of-type(3) {
-                .text-lable {
-                    background: hsla(119, 100%, 35%, 0.8);
-                }
-            }
-            &:nth-of-type(4) {
-                .text-lable {
-                    background: hsla(194, 100%, 44%, 0.8);
-                }
-            }
-        }
-    }
-}
-.swiper-rolling-slider {
-    .swiper-pagination {
-        bottom: 12px;
-        .swiper-pagination-bullet {
-            width: 5px;
-            height: 5px;
-            background-color: transparent;
-            border: 4px solid #eaeaea;
-            margin: 0 4px;
-            opacity: 1;
-            box-sizing: content-box;
-        }
-        .swiper-pagination-bullet-active {
-            background-color: transparent;
-            border: 4px solid #8b8b8b;
-        }
-    }
-}
-
-/* 지도 영역 */
-.map-area {
-    margin-bottom: 1.4rem;
-    .title {
-        position: relative;
-        h6 {
-            color: #222;
-            p {
-                &:nth-of-type(1) {
-                    @include psd-fz(34px);
-                    margin-bottom: 10px;
-                }
-                &:nth-of-type(2) {
-                    font-weight: normal;
-                    letter-spacing: -0.04em;
-                }
-            }
-        }
-        a {
-            position: absolute;
-            top: 6px;
-            left: 260px;
-            padding: 0 10px;
-        }
-    }
-    #map-images {
-        text-align: center;
-    }
-}
-.map-popup {
-    display: none;
-    padding-bottom: 10px;
-    border: 2px solid #c2cad0;
-    margin-top: $base-line-height;
-    @extend %clearfix;
-    h4 {
-        color: #333;
-        @include psd-lh(40px, 1);
-        padding: 0 15px;
-        margin-bottom: 10px;
-        background: #f7f7f7;
-        .btn-colse {
-            float: right;
-            cursor: pointer;
-            &:after {
-                display: inline-block;
-                width: 19px;
-                height: 19px;
-                margin-top: 10px;
-                background: url("../images/svg/icon-colse.svg") no-repeat;
-                background-size: 100% auto;
-                content: "";
-            }
-        }
+/* 20-1.서브_상세화면_내책읽기 (20-1_sub-view-reed-my-book-list.html)  */
+.sub-menu {
+    width: 406px;
+    height: 100vh;
+    background: #fff;
+    border-right: 1px solid hsla(0, 0%, 0%, 0.1);
+    overflow-y: auto;
+    overflow-x: hidden;
+    h2 {
+        font-family: $font-title-b;
+        padding: 30px;
     }
     ul {
-        @include span(2);
-        &:last-child {
-            @include last;
-        }
+        @extend %clearfix;
         li {
-            padding: 0 15px;
-            a {
-                display: block;
-                line-height: 2;
-                color: #666;
-            }
-        }
-    }
-}
-
-/* 이벤트 배너 */
-.event-banner {
-    margin-bottom: 1.4rem;
-    a {
-        img {
-            width: 100%;
-            height: auto;
-        }
-    }
-}
-
-/* SNS 배너 */
-.sns-area {
-    a {
-        @include span(2);
-        box-sizing: border-box;
-        margin-bottom: 10px;
-        &:nth-of-type(odd) {
-            padding-right: 5px;
-        }
-        &:nth-of-type(even) {
-            padding-left: 5px;
-            @include last;
-        }
-        p {
-            display: block;
-            height: 40px;
-            line-height: 40px;
-            padding: 0 20px;
-            span {
-                color: #fff;
-            }
-        }
-        svg, img {
-            float: right;
-            @include h-center ($position: relative);
-        }
-        &:nth-of-type(1) {
-                p {
-                    background: #2756b8;
-                }
-        }
-        &:nth-of-type(2) {
-                p {
-                    background: #934ed0;
-                }
-        }
-        &:nth-of-type(3) {
-                p {
-                    background: #f8d700;
-                }
-        }
-        &:nth-of-type(4) {
-                p {
-                    background: #cc3241;
-                }
-        }
-    }
-}
-
-/* 게시판 */
-.notice-area {
-    @extend .sns-area;
-    margin-bottom: 1.4rem;
-    a {
-        margin-bottom: 0;
-        p {
-            border: 1px solid #e3e3e3;
-            height: 60px;
-            line-height: 60px;
-            text-align: right;
-            padding: 0 15px;
-            background: #fff !important;
-            span {
-                color: #222;
-            }
-        }
-        svg, img {
-            float: left;
-        }
-        &:nth-of-type(1) {
-                svg, img {
-                     width: 34px;
-                     height: 40px;
-                }
-        }
-        &:nth-of-type(2) {
-                svg, img {
-                    width: 42px;
-                    height: 31px;
-                }
-        }
-    }
-    @include susy-breakpoint(480px) {
-        a {
-            p {
-                height: 90px;
-                line-height: 90px;
-                padding: 0 20px;
-            }
-            &:nth-of-type(1) {
-                svg, img {
-                        width: 46px;
-                        height: 41px;
-                    }
-                }
-            &:nth-of-type(2) {
-                svg, img {
-                    width: 68px;
-                    height: 42px;
-                }
-            }
-        }
-    }
-}
-
-/* 가이드 배너 */
-.guide-banner {
-    a {
-        display: block;
-        [class^="ban-"] {
             position: relative;
-            height: 90px;
+            padding: 8px 30px 8px 46px;
+            font-size: rem(22px);
+            line-height: 1;
             &:before {
                 position: absolute;
-                content: "\f105";
-                font-family: FontAwesome;
-                font-size: rem(24px);
+                top: 8px;
+                left: 30px;
+                display: inline-block;
+                content: ".";
+                line-height: 16px;
             }
-            svg, img {
-                height: 40%;
-                @include h-center ($position: absolute);
-            }
-            .text {
-                @include h-center ($position: absolute);
-                line-height: 1.5;
-                h2 {
-                    @include psd-fz(22px);
-                    line-height: 1;
-                    margin-bottom: 4px;
-                }
-                p {
-                    @include psd-fz(12px);
-                }
+            a {
+                line-height: 32px;
             }
         }
-        @include susy-breakpoint(480px) {
-            [class^="ban-"] {
-                height: 120px;
-            }
-            svg, img {
-                height: auto;
-            }
-            .text {
-                h2 {
-                    @include psd-fz(30px);
-                }
-                p {
-                    @include psd-fz(14px);
-                }
-            }
-        }
-        .ban-readme {
-            background: #1566c1;
-            margin-bottom: 10px;
-            &:before {
-                color: #fff;
-                right: 20px;
-                bottom: 34px;
-            }
-            svg, img {
-                left: 15px;
-            }
-            .text {
-                left: 90px;
-                color: #fff;
-                h2 {
-                    color: #fff;
-                }
-            }
-            @include susy-breakpoint(480px) {
-                svg, img {
-                    left: 30px;
-                }
-                .text {
-                    left: 120px;
-                }
-            }
-        }
-        .ban-guide {
+    }
+}
+
+/* 24-1.메인_공통_최근검색어, 24-2.메인_공통_최근검색어, 24-3.메인_공통_최근검색어 24_main-recent_searches.html */
+.search-menu {
+    width: 512px;
+    height: 100vh;
+    background: #fff;
+    border-left: 1px solid hsla(0, 0%, 0%, 0.1);
+    overflow-y: auto;
+    overflow-x: hidden;
+    .search-area {
+        position: relative;
+        @extend %clearfix;
+        padding: 30px 26px;
+        background: #ebeff2;
+        .search-wrap {
+            position: relative;
+            display: inline-block;
+            height: 50px;
+            line-height: 50px;
+            border: 1px solid #d1d4d7;
+            margin-right: 110px;
             background: #fff;
-            border: 6px solid #1566c1;
-            &:before {
-                color: #1566c1;
-                right: 14px;
-                bottom: 28px;
+            border-radius: 25px;
+            input {
+                width: 100%;
+                padding: 0 50px 0 20px;
             }
-            svg, img {
-                left: 10px;
+            label {
+                visibility: hidden;
             }
-            .text {
-                left: 84px;
-                color: #1566c1;
-                h2 {
-                    color: #1566c1;
+            .btn-search-clear {
+                position: absolute;
+                top: 12px;
+                right: 16px;
+                width: 24px;
+                height: 24px;
+                text-align: center;
+                border-radius: 12px;
+                background: #d8d8d8;
+                &:before {
+                    display: inline-block;
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background: url("/assets/images/svg/icon-search-clear.svg") center no-repeat;
+                    background-size: 11px 11px;
                 }
             }
-            @include susy-breakpoint(480px) {
-                svg, img {
-                    left: 26px;
-                }
-                .text {
-                    left: 114px;
+        }
+        .btn-search {
+            position: absolute;
+            right: 30px;
+            @include btn($fz:24px, $color:#fff, $width:98px, $height:50px, $padding:20px, $bg:#f56056, $bd:#ec352f);
+        }
+    }
+}
+.search-menu {
+    .message {
+        padding: 80px 30px 110px 30px;
+        text-align: center;
+    }
+    .keyword-btn-set {
+        @extend %clearfix;
+        padding: 28px 30px 0 30px;
+        .btn-new-search {
+            font-size: rem(18px);
+            color: #0f9fff;
+        }
+        .delete-area {
+            margin-top: -5px;
+            span {
+                font-size: rem(18px);
+                color: #888;
+                height: 26px;
+                line-height: 26px;
+                vertical-align: 5px;
+            }
+            .btn-delete {
+                width: 26px;
+                height: 26px;
+                text-align: center;
+                border-radius: 6px;
+                background: #a9a9ab;
+                border: 1px solid #9a999b;
+                vertical-align: text-top;
+                margin-left: 15px;
+                &:before {
+                    display: inline-block;
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background: url("/assets/images/svg/icon-search-delete.svg") center no-repeat;
+                    background-size: 13px 14px;
                 }
             }
         }
     }
 }
+.search-menu {
+    .keyword {
+        @extend .keyword-btn-set;
+        padding-top: 10px;
+        li {
+            @extend %clearfix;
+            padding: 10px 0;
+            .delete-area {
+                margin-top: 3px;
+                span {
+                    vertical-align: 5px;
+                }
+                .btn-delete {
+                    background: #d8d8d8;
+                    border: 1px solid #c5c4c4;
+                }
+            }
+        }
+    }
+}
+
 figure.img-wrap {
     @extend %clearfix;
     .img {
@@ -461,14 +189,9 @@ figure.img-wrap {
         float: left;
         width: 150px;
         height: 100px;
-        border: 1px solid #dedede;
-        margin-right: 15px;
         &:after {
             display: block;
             content: "";
-            width: 55px;
-            height: 42px;
-            background: url("../images/svg/thumbnail.svg") center no-repeat;
             background-size: 100%;
             @include wh-center($position: absolute);
         }
@@ -481,10 +204,6 @@ figure.img-wrap {
         .text-area {
             h6 {
                 margin-bottom: 6px;
-            }
-            &:nth-of-type(2) {
-                float: left;
-                margin-top: 25px;
             }
         }
     }

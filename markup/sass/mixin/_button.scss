@@ -1,12 +1,12 @@
 // 버튼 기본 디자인 설정 (PSD 기준사이즈)
-@mixin btn($fz:26px, $color:#fff, $width:140px, $height:60px, $padding:26px, $bg:$btn-red, $ratio:2) {
-    font-size: rem($fz, $ratio);
+@mixin btn($fz:26px, $color:#fff, $width:98px, $height:50px, $padding:20px, $bg:null, $bd:null) {
+    font-size: rem($fz);
     color: $color;
-    min-width: rem($width, $ratio);
-    padding: 0 rem($padding, $ratio);
-    // 높이, 행간 설정
-    $height: rem($height, $ratio);
+    min-width: $width;
+    padding: 0 $padding;
     height: $height;
     line-height: $height;
+    border-radius: $height/2;
+    border: 1px solid $bd;
     background: $bg;
 }

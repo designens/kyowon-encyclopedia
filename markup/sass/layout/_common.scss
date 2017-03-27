@@ -6,11 +6,11 @@ html {
     font-family: $font-family;
     font-size: $html-fz;
     body {
-        min-width: 1280px;
+        min-width: 800px;
         min-height: 100vh;
         @include psd-fz($body-fz);
-        line-height: 1.5;
         color: $font-base;
+        line-height: 1.5;
     }
     body * {
         box-sizing: border-box;
@@ -18,31 +18,39 @@ html {
     }
 }
 
-// Select Box 기본 스타일
-.select-wrap {
-    position: relative;
-    display: inline-block;
-    background-color: #fff;
-    &:after {
-        position: absolute;
-        top: 0;
-        right: 10px;
-        display: inline-block;
-        @include  fa($content:"\f04b", $fz:14px*1.5, $color: #666);
-        -ms-transform: rotate(-30deg); // IE 9
-        -webkit-transform: rotate(-30deg); // Safari
-        transform: rotate(-30deg);
-        z-index: 9;
-        @include susy-breakpoint($mobile) {
-            top: 2px;
-            @include psd-fz(14px);
-        }
-    }
-    select {
-        position: relative;
-        padding-right: 20px;
-        background-color: transparent;
-        cursor: pointer;
-        z-index: 10;
+// 서브메뉴 정렬
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+
+// 딤처리 테스트
+.dim-area {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: hsla(0, 0%, 0%, 0.1);
+}
+
+// 버튼 마우스 포인터
+[class^="btn-"] {
+    cursor: pointer;
+}
+
+// 팝업 설정
+.pop-wrap {
+    @include wh-center ($position: absolute, $h-percent: 50%, $w-percent: 50%);
+    // width: calc(100% - 350px);
+    width: 906px;
+    height: 568px;
+    background: #fff;
+    .title {
+        padding: 18px 26px 0;
+        border-bottom: 2px dashed #ccc;
+        height: 66px;
     }
 }
