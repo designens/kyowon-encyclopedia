@@ -8,7 +8,7 @@ html {
     body {
         min-width: 800px;
         min-height: 100vh;
-        @include psd-fz($body-fz);
+        font-size: rem($body-fz);
         color: $font-base;
         line-height: 1.5;
     }
@@ -44,13 +44,29 @@ html {
 // 팝업 설정
 .pop-wrap {
     @include wh-center ($position: absolute, $h-percent: 50%, $w-percent: 50%);
-    // width: calc(100% - 350px);
-    width: 906px;
-    height: 568px;
+    width: -webkit-calc( 100% - 300px );
+    width: -moz-calc( 100% - 300px );
+    width: calc( 100% - 300px );
+    min-width: 906px;
     background: #fff;
+    overflow-y: auto;
     .title {
         padding: 18px 26px 0;
-        border-bottom: 2px dashed #ccc;
+        border-bottom: 2px dashed #dbdbdb;
         height: 66px;
+        span {
+            font-size: rem(22px);
+            color: #888;
+            em {
+                color: #ee4742;
+            }
+        }
+    }
+    .wrap {
+        @extend %clearfix;
+        padding-top: 30px;
+        &:nth-of-type(1) {
+            padding-top: 50px;
+        }
     }
 }

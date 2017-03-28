@@ -14,7 +14,7 @@ body {
 .guide {
     margin-bottom: 0;
     h1, h2, h3, h4, h5, h6 {
-        @include psd-mb($body-fz, bottom);
+        margin-bottom: rem(20px);
     }
 }
 .wrap {
@@ -23,12 +23,11 @@ body {
     article {
         .title {
             font-family: $font-title-b;
-            font-size: rem(60px);
             color: #1566c1;
             &:before {
                 content: "\f013";
                 font-family: FontAwesome;
-                font-size: rem(40px);
+                font-size: rem(24px);
                 color: #1566c1;
                 padding-right: rem(10px);
             }
