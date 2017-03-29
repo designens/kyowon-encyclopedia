@@ -28,4 +28,15 @@
     };
     svgInjection();
 
+    // Accordion 사용
+    // [참고] http://codepen.io/dope/pen/yyxVga
+    var $title = $('.js-title'),
+          copy   = '.js-copy';
+
+    $title.click(function () {
+      $(this).next(copy).slideDown();
+      $(this).parent().addClass('js-open').siblings().children().next().slideUp().parent().removeClass('js-open');
+      return false;
+    });
+
 })(window, document, window.jQuery);
