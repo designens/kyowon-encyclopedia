@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" viewBox="0 0 40 41">
+  <defs>
+    <style>
+      .btn-full-img-close {
+        fill: #fff;
+        stroke: #000;
+        stroke-linejoin: round;
+        stroke-opacity: 0.5;
+        stroke-width: 2px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="btn-full-img-close.svg" class="btn-full-img-close" d="M1255.01,60l-0.71.709-0.49-.517-0.52.517-15.22-16.036L1222.71,60.99l-0.52-.521-0.49.521-0.71-.716L1236.87,43.4,1221.01,26.7l0.72-.709,0.49,0.517,0.52-.517,15.32,16.148,15.2-16.148,0.52,0.521,0.49-.521,0.72,0.716-15.72,16.7Z" transform="translate(-1218 -23)"/>
+</svg>

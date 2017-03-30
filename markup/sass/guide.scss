@@ -62,6 +62,9 @@ body {
                 span {
                     font-size: rem(12px);
                     color: #aaa;
+                    display: block;
+                    margin-left: 20px;
+                    margin-bottom: 10px;
                     &:before {
                         content: "(";
                     }

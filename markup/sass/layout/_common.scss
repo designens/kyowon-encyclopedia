@@ -41,6 +41,31 @@ html {
     cursor: pointer;
 }
 
+// 라벨 설정
+[class^="lable-"] {
+    display: inline-block;
+    text-align: center;
+    vertical-align: text-bottom;
+    font-family: $font-title-m;
+    font-size: rem(22px);
+}
+.lable-science {
+    @include btn($bg:$yellow);
+}
+.lable-arts {
+    @include btn($bg:$orange);
+}
+.lable-social {
+    @include btn($bg:$purple);
+    line-height: 1.55;
+}
+.lable-korean {
+    @include btn($bg:$light-green);
+}
+.lable-math {
+    @include btn($bg:$sky-blue);
+}
+
 // 팝업 설정
 .pop-wrap {
     @include wh-center ($position: absolute, $h-percent: 50%, $w-percent: 50%);

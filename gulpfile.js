@@ -56,7 +56,7 @@ var dir = {
 var js_order = [
     // dir.js + '/**/*.js',
     dir.js + '/lib/svg-injector.min.js',
-    dir.js + '/lib/jquery.touchSwipe.min.js',
+    dir.js + '/lib/flickity.pkgd.min.js',
 ];
 
 // 자바스크립트 유지관리 파일 이동
