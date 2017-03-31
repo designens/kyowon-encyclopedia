@@ -18,12 +18,24 @@ html {
     }
 }
 
-// 서브메뉴 정렬
+// 정렬 설정
 .fl {
     float: left;
 }
 .fr {
     float: right;
+}
+.mt20 {
+    margin-top: 20px;
+}
+.mb20 {
+    margin-bottom: 20px;
+}
+.ml20 {
+    margin-left: 20px;
+}
+.mr20 {
+    margin-right: 20px;
 }
 
 // 딤처리 테스트

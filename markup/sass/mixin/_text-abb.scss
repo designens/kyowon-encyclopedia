@@ -5,3 +5,9 @@
     text-overflow:ellipsis;
     white-space:nowrap;
 }
+
+@mixin text-aria($pos: top, $num: -9999px) {
+    position: absolute;
+    #{$pos}: $num;
+    visibility: hidden;
+}

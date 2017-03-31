@@ -263,9 +263,7 @@
                 background-size: 100%;
             }
             span {
-                position: absolute;
-                top: -9999px;
-                visibility: hidden;
+                @include text-aria;
             }
         }
     }
@@ -340,7 +338,7 @@
         width: 100%;
         height: 90px;
         background: url(/assets/images/bg/bg-sub-book-header.png);
-        h4 {
+        h5 {
             padding-top: 38px;
             font-weight: bold;
             .lable-social {
@@ -364,6 +362,29 @@
     }
 }
 .sub-view {
+    .btn-menu-list {
+        @include h-center($position: absolute);
+        width: 40px;
+        height: 49px;
+        background: #f56056;
+        border-top: 1px solid #ed3730;
+        border-bottom: 1px solid #ed3730;
+        border-right: 1px solid #ed3730;
+        border-bottom-right-radius: 25px;
+        border-top-right-radius: 25px;
+        &:before {
+                display: block;
+                content: "";
+                width: 100%;
+                height: 100%;
+                margin-left: -3px;
+                background: url("/assets/images/svg/btn-menu-list.svg") center no-repeat;
+                background-size: 20px 20px;
+            }
+        span {
+            @include text-aria;
+        }
+    }
     .container {
         height: -webkit-calc( 100vh - 180px );
         height: -moz-calc( 100vh - 180px );
@@ -378,6 +399,9 @@
         p {
             text-align: justify;
             margin-bottom: 40px;
+            a {
+                border-bottom: 1px solid #4a4a4a;
+            }
             &:last-child {
                 margin-bottom: 0;
             }
@@ -387,16 +411,42 @@
 // Main Touch Slider
 // [참고] http://flickity.metafizzy.co/api.html
 .img-area {
+    +p {
+        clear: both;
+    }
+    .thumbnail {
+        float: left;
+        .img {
+            width: 376px;
+            border: 1px solid #b8b8b8;
+            img {
+                width: auto;
+                height: 100%;
+            }
+        }
+        figcaption {
+            font-size: rem(18px);
+            padding-top: 14px;
+        }
+    }
     .touch-slider {
         float: left;
-        margin-right: 20px;
         .carousel {
             width: 376px;
-            height: 235px;
             .carousel-cell {
-                img {
-                    width: auto;
-                    height: 100%;
+                .thumbnail {
+                    width: 376px;
+                    height: 235px;
+                    background: #000;
+                    border: 1px solid #b8b8b8;
+                    img {
+                        outline: 1px solid #b8b8b8;
+                    }
+                }
+                figcaption {
+                    font-size: rem(18px);
+                    padding-top: 14px;
+                    clear: both;
                 }
             }
             // 플러그인 이전, 다음 버튼 제거
@@ -454,6 +504,13 @@
                     span {
                         font-size: rem(16px);
                         margin-right: 33px;
+                    }
+                }
+                &:last-child {
+                    a {
+                        span {
+                            margin-right: 0;
+                        }
                     }
                 }
             }
