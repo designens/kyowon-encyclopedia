@@ -1,9 +1,10 @@
-@mixin text-abb ($width, $height) {
-    width: $width;
-    height: $height;
+@mixin text-abb($line-num) {
+    display: -webkit-box;
     overflow: hidden;
-    text-overflow:ellipsis;
-    white-space:nowrap;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $line-num;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
 }
 
 @mixin text-aria($pos: top, $num: -9999px) {
