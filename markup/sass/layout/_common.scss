@@ -1,13 +1,20 @@
 // =======================================
 // Common Style
 // =======================================
+// Viewport 설정
+@-ms-viewport, @-o-viewport, @viewport {
+    width: device-width;
+    min-width: 800px;
+    min-height: 100vh;
+    min-zoom: 1;
+    max-zoom: 1;
+}
+
 // 폰트 기본 설정
 html {
     font-family: $font-family;
     font-size: $html-fz;
     body {
-        min-width: 800px;
-        min-height: 100vh;
         font-size: rem($body-fz);
         color: $font-base;
         line-height: 1.5;
