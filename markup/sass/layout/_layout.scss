@@ -1,7 +1,11 @@
 // =======================================
-// 모바일_main
+// Viewport 설정
 // =======================================
-
+@viewport {
+    width: extend-to-zoom 1280px;
+    min-zoom: 1;
+    max-zoom: 1;
+}
 /* ----------------------------------------------------------------------
  07-4.내책읽기,
  07-5.내책읽기,
@@ -658,7 +662,9 @@
         }
         .slide {
             position: absolute;
+            left: 0;
             bottom: 0;
+            height: 2px;
             transition: left 0.3s ease-out;
             .width {
                 position: absolute;
@@ -703,9 +709,13 @@
                             float: left;
                             width: 146px;
                             height: 92px;
+                            border-radius: 8px;
+                            overflow: hidden;
+                            border: 1px solid #ccc;
                             img {
                                 width: 100%;
                                 height: auto;
+                                vertical-align: middle;
                             }
                         }
                         .text-area {
