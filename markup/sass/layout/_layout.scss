@@ -408,7 +408,7 @@
     .container {
         height: -webkit-calc( 100vh - 180px );
         height: -moz-calc( 100vh - 180px );
-        height: calc( 100vh - 180px );;
+        height: calc( 100vh - 180px );
         padding: 22px 56px;
         background: url(/assets/images/bg/bg-sub-book-common.png);
         overflow-y: auto;
@@ -934,6 +934,170 @@
                         &:nth-of-type(2) {
                             margin-top: 0;
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ----------------------------------------------------------------------
+ 27.이미지상세뷰어,
+ 29.영상-상세-뷰어
+ (27_main-search-tab_view.html)
+----------------------------------------------------------------------- */
+.search-tab-view {
+    header {
+        width: 100px;
+        height: 85px;
+        .btn-view-prev {
+            width: 85px;
+            height: 85px;
+                &:before {
+                    display: block;
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background: url("/assets/images/svg/btn-view-prev.svg") center no-repeat;
+                    background-size: 34px 28px;
+                }
+        }
+    }
+}
+.search-tab-view {
+    .slider-gallery {
+        height: -webkit-calc( 100vh - 85px );
+        height: -moz-calc( 100vh - 85px );
+        height: calc( 100vh - 85px );
+        overflow: hidden;
+        padding: 0 56px;
+        .touch-slider {
+            float: left;
+            width: -webkit-calc( 100% - 292px );
+            width: -moz-calc( 100% - 292px );
+            width: calc( 100% - 292px );
+            overflow-y: auto;
+            .carousel {
+                width: 100%;
+                .carousel-cell {
+                    clear: both;
+                    .thumbnail {
+                        width: 100%;
+                        height: 550px;
+                        text-align: center;
+                        border-radius: 8px;
+                        background: #000;
+                        overflow: hidden;
+                        img {
+                            width: auto;
+                            height: 100%;
+                            max-width: 875px;
+                        }
+                    }
+                    figcaption {
+                        padding: 28px 0;
+                        font-size: rem(18px);
+                        background: #fff;
+                        clear: both;
+                        h4 {
+                            font-weight: bold;
+                            margin-bottom: 18px;
+                            .lable-science {
+                                margin-right: 18px;
+                            }
+                            .sub-title {
+                                font-weight: normal;
+                            }
+                        }
+                        p {
+                            height: 60px;
+                            overflow-y: auto;
+                        }
+                    }
+                }
+                // 플러그인 이전, 다음 버튼 제거
+                .flickity-prev-next-button {
+                    top: 40%;
+                    width: 35px;
+                    height: 65px;
+                    border-radius: 0;
+                    background: transparent;
+                    svg {
+                        display: none;
+                    }
+                    &.previous {
+                        left: 28px;
+                        &:before {
+                            display: block;
+                            content: "";
+                            width: 100%;
+                            height: 100%;
+                            background: url("/assets/images/svg/btn-view-img.svg") center no-repeat;
+                            background-size: 35px 65px;
+                        }
+                    }
+                    &.next {
+                        right: 28px;
+                        &:before {
+                            display: block;
+                            content: "";
+                            width: 100%;
+                            height: 100%;
+                            background: url("/assets/images/svg/btn-view-img.svg") center no-repeat;
+                            -ms-transform: rotate(180deg);
+                            -webkit-transform: rotate(180deg);
+                            transform: rotate(180deg);
+                            background-size: 35px 65px;
+                        }
+                    }
+                }
+                .flickity-page-dots {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.search-tab-view {
+    .slider-gallery {
+        .view-content {
+            float: right;
+            width: 270px;
+            height: -webkit-calc( 100vh - 85px );
+            height: -moz-calc( 100vh - 85px );
+            height: calc( 100vh - 85px );
+            overflow-y: auto;
+            &.images {
+                @include layout(2 10px/130px);
+                .img-box {
+                    position: relative;
+                    height: 130px;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    @include gallery(1 of 2);
+                    margin-bottom: 10px;
+                    &.selected, &:hover, &:focus, &:active {
+                        position: relative;
+                        border: 6px solid #f56056;
+                        background: rgba(0, 0, 0, 0.6);
+                        &:before {
+                            position: absolute;
+                            display: block;
+                            content: "";
+                            width: 100%;
+                            height: 100%;
+                            background: rgba(0, 0, 0, 0.6);
+                            background-image: url("/assets/images/svg/icon-selected.svg");
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: 46px 31px;
+                            z-index: 1;
+                        }
+                    }
+                    img {
+                        width: auto;
+                        height: 100%;
+                        @include w-center;
                     }
                 }
             }
