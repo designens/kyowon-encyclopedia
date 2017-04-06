@@ -980,18 +980,19 @@
             .carousel {
                 width: 100%;
                 .carousel-cell {
+                    width: 100%;
                     clear: both;
                     .thumbnail {
+                        position: relative;
                         width: 100%;
                         height: 550px;
-                        text-align: center;
                         border-radius: 8px;
                         background: #000;
                         overflow: hidden;
                         img {
+                            @include wh-center;
                             width: auto;
                             height: 100%;
-                            max-width: 875px;
                         }
                     }
                     figcaption {
@@ -1095,9 +1096,10 @@
                         }
                     }
                     img {
+                        @include wh-center;
                         width: auto;
                         height: 100%;
-                        @include w-center;
+                        border-radius: 8px;
                     }
                 }
             }
