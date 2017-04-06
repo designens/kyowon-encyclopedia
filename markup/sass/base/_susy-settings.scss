@@ -43,7 +43,7 @@ $susy: (
 	// Gutter Position
 	// 거터의 방향 설정 (after, before, split, inside, inside-static)
 	// ※ inside 설정은 Padding으로 처리됨
-	gutter-position: split,
+	gutter-position: after,
 
 	// Container Position
 	// 상위 요소를 기준으로 하는 컨테이너 요소의 레이아웃 정렬 (center, left, right, <length> * 2)
