@@ -987,10 +987,11 @@
                         width: 100%;
                         height: 550px;
                         border-radius: 8px;
+                        border: 1px solid #b8b8b8;
                         background: #000;
                         overflow: hidden;
                         img {
-                            @include wh-center;
+                            @include w-center;
                             width: auto;
                             height: 100%;
                         }
@@ -1072,11 +1073,12 @@
                 @include layout(2 10px/130px);
                 .img-box {
                     position: relative;
+                    @include gallery(1 of 2);
                     height: 130px;
                     border-radius: 8px;
-                    overflow: hidden;
-                    @include gallery(1 of 2);
+                    border: 1px solid #b8b8b8;
                     margin-bottom: 10px;
+                    overflow: hidden;
                     &.selected, &:hover, &:focus, &:active {
                         position: relative;
                         border: 6px solid #f56056;
@@ -1096,7 +1098,7 @@
                         }
                     }
                     img {
-                        @include wh-center;
+                        @include w-center;
                         width: auto;
                         height: 100%;
                         border-radius: 8px;
