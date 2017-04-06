@@ -436,12 +436,18 @@
     }
     .thumbnail {
         float: left;
+        img {
+            @include w-center;
+            object-fit: cover;
+        }
         .img {
             width: 376px;
+            height: 235px;
             border: 1px solid #b8b8b8;
+            overflow: hidden;
             img {
-                width: auto;
-                height: 100%;
+                @include w-center;
+                object-fit: cover;
             }
         }
         figcaption {
@@ -561,9 +567,9 @@
     .touch-slider {
         .carousel {
             background: #000;
-            border: 1px solid #b8b8b8;
             .carousel-cell {
                 width: 100vw;
+                height: 100vh;
                 overflow: hidden;
                 .thumbnail {
                     text-align: center;
@@ -793,9 +799,8 @@
                                 overflow: hidden;
                                 border: 1px solid #ccc;
                                 img {
-                                    width: 100%;
-                                    height: auto;
                                     @include h-center;
+                                    object-fit: cover;
                                 }
                             }
                             .text-area {
@@ -808,7 +813,7 @@
                                 }
                                 p {
                                     font-size: rem(18px);
-                                    @include text-abb(2);
+                                    @include ellipsis(2);
                                 }
                             }
                             .location {
@@ -816,7 +821,7 @@
                                 color: #888;
                                 height: 32px;
                                 padding-top: 10px;
-                                @include text-abb(1);
+                                @include ellipsis(1);
                                 overflow: hidden;
                                 clear: both;
                             }
@@ -872,7 +877,7 @@
                         img {
                             width: auto;
                             height: 100%;
-                            @include w-center;
+                            object-fit: cover;
                         }
                     }
                 }
@@ -893,7 +898,7 @@
                         margin-top: 16px;
                         p {
                             font-size: rem(18px);
-                            @include text-abb(2);
+                            @include ellipsis(2);
                             padding-top: 10px;
                         }
                         a {
@@ -903,9 +908,7 @@
                             border-radius: 8px;
                             overflow: hidden;
                             img, video {
-                                width: auto;
-                                height: 100%;
-                                @include w-center;
+                                object-fit: cover;
                             }
                         }
                         &.selected, &:hover, &:focus, &:active {
@@ -992,8 +995,7 @@
                         overflow: hidden;
                         img {
                             @include w-center;
-                            width: auto;
-                            height: 100%;
+                            object-fit: cover;
                         }
                     }
                     figcaption {
@@ -1099,9 +1101,8 @@
                     }
                     img {
                         @include w-center;
-                        width: auto;
-                        height: 100%;
                         border-radius: 8px;
+                        object-fit: cover;
                     }
                 }
             }

@@ -1,4 +1,4 @@
-@mixin text-abb($line-num) {
+@mixin ellipsis($line-num) {
     display: -webkit-box;
     overflow: hidden;
     text-overflow: ellipsis;
