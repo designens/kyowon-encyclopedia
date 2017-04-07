@@ -44,25 +44,28 @@
     overflow-x: hidden;
     h2 {
         font-family: $font-title-b;
-        padding: 30px 30px 15px 30px;
+        padding: 15px 28px;
+        line-height: 1.5;
+        @include ellipsis(1);
     }
     ul {
         @extend %clearfix;
         li {
             position: relative;
-            padding: 8px 30px 8px 46px;
+            padding: 8px 28px;
             font-size: rem(22px);
             line-height: 1;
             &:before {
                 position: absolute;
                 top: 8px;
-                left: 30px;
+                left: 28px;
                 display: inline-block;
                 content: ".";
                 line-height: 16px;
             }
             a {
                 line-height: 32px;
+                padding-left: 16px;
             }
         }
     }
@@ -572,7 +575,14 @@
                 height: 100vh;
                 overflow: hidden;
                 .thumbnail {
+                    position: relative;
                     text-align: center;
+                    height: 100vh;
+                    video {
+                        @include wh-center($position: absolute);
+                        width: 100%;
+                        height: auto;
+                    }
                     img {
                         width: auto;
                         height: 100vh;
@@ -907,7 +917,8 @@
                             height: 136px;
                             border-radius: 8px;
                             overflow: hidden;
-                            img, video {
+                            video {
+                                border-radius: 8px;
                                 object-fit: cover;
                             }
                         }
@@ -945,9 +956,8 @@
 }
 
 /* ----------------------------------------------------------------------
- 27.이미지상세뷰어,
- 29.영상-상세-뷰어
- (27_main-search-tab_view.html)
+ 27.이미지상세뷰어
+ (27_main-search-tab-img-view.html)
 ----------------------------------------------------------------------- */
 .search-tab-view {
     header {
@@ -993,6 +1003,11 @@
                         border: 1px solid #b8b8b8;
                         background: #000;
                         overflow: hidden;
+                        video {
+                            @include h-center;
+                            width: 100%;
+                            height: auto;
+                        }
                         img {
                             @include w-center;
                             object-fit: cover;
@@ -1021,7 +1036,7 @@
                 }
                 // 플러그인 이전, 다음 버튼 제거
                 .flickity-prev-next-button {
-                    top: 40%;
+                    top: 278px;
                     width: 35px;
                     height: 65px;
                     border-radius: 0;
@@ -1105,6 +1120,156 @@
                         object-fit: cover;
                     }
                 }
+            }
+        }
+    }
+}
+/* ----------------------------------------------------------------------
+ 29.영상-상세-뷰어
+ (29_main-search-tab-video-view.html)
+----------------------------------------------------------------------- */
+.search-tab-view {
+    .slider-gallery {
+        .touch-slider {
+            .carousel {
+                .carousel-cell {
+                    .thumbnail {
+                        .btn-play {
+                            @include w-center($position: absolute);
+                            top: 215px;
+                            width: 122px;
+                            height: 122px;
+                            z-index: 10;
+                            &:before {
+                                position: absolute;
+                                top: 0;
+                                display: block;
+                                content: "";
+                                width: 100%;
+                                height: 100%;
+                                background-image: url("../../assets/images/common/icon-play.png");
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                background-size: 122px 122px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.search-tab-view {
+    .slider-gallery {
+        .view-content {
+            float: right;
+            width: 270px;
+            height: -webkit-calc( 100vh - 85px );
+            height: -moz-calc( 100vh - 85px );
+            height: calc( 100vh - 85px );
+            overflow-y: auto;
+            &.video {
+                @include layout(2 10px/130px);
+                .video-box {
+                    position: relative;
+                    @include span(full);
+                    height: 171px;
+                    border-radius: 8px;
+                    background: #000;
+                    border: 1px solid #b8b8b8;
+                    margin-bottom: 10px;
+                    overflow: hidden;
+                    &.selected, &:hover, &:focus, &:active {
+                        position: relative;
+                        border: 6px solid #f56056;
+                        background: rgba(0, 0, 0, 0.6);
+                        &:before {
+                            position: absolute;
+                            display: block;
+                            content: "";
+                            width: 100%;
+                            height: 100%;
+                            background: rgba(0, 0, 0, 0.6);
+                            background-image: url("/assets/images/svg/icon-selected.svg");
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: 46px 31px;
+                            z-index: 1;
+                        }
+                    }
+                    video {
+                        @include h-center;
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ----------------------------------------------------------------------
+ 20-2.서브_상세화면_내책읽기편집2
+ (20-2_sub-view-reed-my-book-list-edit.html)
+----------------------------------------------------------------------- */
+.sub-dd-menu {
+    @extend .sub-menu;
+    h2 {
+        position: relative;
+        padding-left: 66px;
+        &:before {
+            position: absolute;
+            top: 28px;
+            left: 28px;
+            display: inline-block;
+            content: "";
+            width: 26px;
+            height: 26px;
+            background: #fff url("/assets/images/common/btn-dd-delete.png") center no-repeat;
+            background-size: 26px 26px;
+        }
+    }
+    ul {
+        li.sortable-placeholder {
+            max-height: 111px;
+            overflow: hidden;
+            border-bottom: 1px solid #ccc;
+            box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.4);
+        }
+        li {
+            padding-left: 38px;
+            padding-right: 60px;
+            border-top: 1px solid #ccc;
+            max-height: 111px;
+            overflow: hidden;
+            cursor: pointer;
+            &:before {
+                position: absolute;
+                top: 50%;
+                left: 30px;
+                display: inline-block;
+                content: "";
+                width: 20px;
+                height: 20px;
+                margin-top: -10px;
+                background: #fff url("/assets/images/common/btn-dd-delete.png") center no-repeat;
+                background-size: 20px 20px;
+            }
+            &:after {
+                position: absolute;
+                top: 50%;
+                right: 25px;
+                display: inline-block;
+                content: "";
+                width: 24px;
+                height: 24px;
+                margin-top: -12px;
+                background: #fff url("../../assets/images/svg/btn-dd-move.svg") center no-repeat;
+                background-size: 24px 24px;
+            }
+            a {
+                @include ellipsis(3);
+                padding-left: 30px;
             }
         }
     }
