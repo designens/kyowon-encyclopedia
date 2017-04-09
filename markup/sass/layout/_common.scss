@@ -91,7 +91,9 @@ html {
     width: -webkit-calc( 100% - 300px );
     width: -moz-calc( 100% - 300px );
     width: calc( 100% - 300px );
+    height: 586px;
     min-width: 906px;
+    max-width: 906px;
     background: #fff;
     overflow-y: auto;
     .title {

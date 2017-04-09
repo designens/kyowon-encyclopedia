@@ -201,7 +201,7 @@
  17-3.웹팝업_교과연계
  (17_popup-curriculum.html)
 ----------------------------------------------------------------------- */
-.pop-wrap {
+.curriculum {
     .wrap {
         [class^="col-"] {
             float: left;
@@ -225,20 +225,19 @@
         }
     }
 }
-.pop-wrap {
-    height: 568px;
+.curriculum {
     .wrap {
         &:nth-of-type(1) {
             .col-text-box {
                 border-bottom: 1px solid #dbdbdb;
-                min-height: 200px;
+                min-height: 201px;
             }
         }
         .col-text-box {
             width: -webkit-calc( 100% - 158px );
             width: -moz-calc( 100% - 158px );
             width: calc( 100% - 158px );
-            min-height: 150px;
+            min-height: 100px;
             ul {
                 @extend %clearfix;
                 display: block;
@@ -1307,4 +1306,12 @@
             border: 1px solid #9a999b;
         }
     }
+}
+
+/* ----------------------------------------------------------------------
+ 07-3.위젯_내가만든책선택하기
+ (07-3_books-created-choose.html)
+----------------------------------------------------------------------- */
+.books-type-1 {
+
 }
