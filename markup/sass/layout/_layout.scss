@@ -860,6 +860,7 @@
                             position: relative;
                             border: 6px solid #f56056;
                             background: rgba(0, 0, 0, 0.6);
+                            cursor: pointer;
                             &:before {
                                 position: absolute;
                                 display: block;
@@ -926,6 +927,7 @@
                                 position: relative;
                                 border: 6px solid #f56056;
                                 background: rgba(0, 0, 0, 0.6);
+                                cursor: pointer;
                                 &:before {
                                     position: absolute;
                                     display: block;
@@ -1099,6 +1101,7 @@
                         position: relative;
                         border: 6px solid #f56056;
                         background: rgba(0, 0, 0, 0.6);
+                        cursor: pointer;
                         &:before {
                             position: absolute;
                             display: block;
@@ -1182,6 +1185,7 @@
                         position: relative;
                         border: 6px solid #f56056;
                         background: rgba(0, 0, 0, 0.6);
+                        cursor: pointer;
                         &:before {
                             position: absolute;
                             display: block;
@@ -1383,6 +1387,41 @@
                             img {
                                 @include w-center;
                                 object-fit: cover;
+                            }
+                            &.make {
+                                position: relative;
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                                .cover {
+                                    position: absolute;
+                                    top: 0;
+                                    bottom: 0;
+                                    left: 0;
+                                    right: 0;
+                                    z-index: 1;
+                                    transform: inherit;
+                                }
+                                &.selected, &:hover, &:focus, &:active {
+                                    position: relative;
+                                    border: 8px solid #f56056;
+                                    background: rgba(0, 0, 0, 0.6);
+                                    cursor: pointer;
+                                    &:before {
+                                        position: absolute;
+                                        display: block;
+                                        content: "";
+                                        width: 100%;
+                                        height: 100%;
+                                        background: rgba(0, 0, 0, 0.6);
+                                        background-image: url("/assets/images/svg/icon-selected.svg");
+                                        background-repeat: no-repeat;
+                                        background-position: center;
+                                        background-size: 58px 39px;
+                                        z-index: 1;
+                                    }
+                                }
                             }
                         }
                         figcaption {
