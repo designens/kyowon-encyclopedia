@@ -1146,7 +1146,7 @@
                                 content: "";
                                 width: 100%;
                                 height: 100%;
-                                background-image: url("../../assets/images/common/icon-play.png");
+                                background-image: url("/assets/images/common/icon-play.png");
                                 background-repeat: no-repeat;
                                 background-position: center;
                                 background-size: 122px 122px;
@@ -1225,7 +1225,7 @@
             content: "";
             width: 26px;
             height: 26px;
-            background: #fff url("/assets/images/common/btn-dd-delete.png") center no-repeat;
+            background: url("/assets/images/common/btn-dd-delete.png") center no-repeat;
             background-size: 26px 26px;
         }
     }
@@ -1252,7 +1252,7 @@
                 width: 20px;
                 height: 20px;
                 margin-top: -10px;
-                background: #fff url("/assets/images/common/btn-dd-delete.png") center no-repeat;
+                background: url("/assets/images/common/btn-dd-delete.png") center no-repeat;
                 background-size: 20px 20px;
             }
             &:after {
@@ -1264,7 +1264,7 @@
                 width: 24px;
                 height: 24px;
                 margin-top: -12px;
-                background: #fff url("../../assets/images/svg/btn-dd-move.svg") center no-repeat;
+                background: url("/assets/images/svg/btn-dd-move.svg") center no-repeat;
                 background-size: 24px 24px;
             }
             a {
@@ -1313,5 +1313,150 @@
  (07-3_books-created-choose.html)
 ----------------------------------------------------------------------- */
 .books-type-1 {
+    .title {
+        position: relative;
+        .btn-set {
+            position: absolute;
+            top: 50%;
+            right: 28px;
+            margin-top: -22px;
+            .book-make {
+                width: 176px;
+                height: 44px;
+                line-height: 44px;
+                font-size: rem(22px);
+                border: 1px solid #cecdcd;
+                border-radius: 8px;
+                .icon-book-make {
+                    position: relative;
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    margin: 0;
+                    margin-right: 6px;
+                    &:before {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: inline-block;
+                        content: "";
+                        width: 16px;
+                        height: 16px;
+                        background: url("/assets/images/svg/icon-book-make.svg") center no-repeat;
+                        background-size: 16px 16px;
+                    }
+                }
+            }
+        }
+    }
+    .wrap {
+        position: relative;
+        width: 850px;
+        margin: 0 auto;
+        overflow-x: auto;
+        div {
+            position: relative;
+            overflow: hidden;
+            -webkit-overflow-scrolling: touch;
+            height: 470px;
+            ul {
+                display: inline-block;
+                white-space: nowrap;
+                overflow: hidden;
+                li {
+                    display: inline-block;
+                    width: 204px;
+                    min-height: 340px;
+                    margin-right: 23px;
+                    vertical-align: top;
+                    @extend %clearfix;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    figure {
+                        .img-box {
+                            width: 100%;
+                            height: 256px;
+                            border: 1px solid #b8b8b8;
+                            border-radius: 8px;
+                            overflow: hidden;
+                            img {
+                                @include w-center;
+                                object-fit: cover;
+                            }
+                        }
+                        figcaption {
+                            p {
+                                white-space: pre-wrap;
+                                &.img-title {
+                                    margin-top: 18px;
+                                    @include ellipsis(2);
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+                    .btn-modified {
+                        width: 110px;
+                        height: 34px;
+                        line-height: 34px;
+                        font-size: rem(16px);
+                        color: #888;
+                        text-align: center;
+                        border-radius: 17px;
+                        background: #eee;
+                        @include w-center;
+                        margin-top: 30px;
+                        .icon-modified {
+                            position: relative;
+                            display: inline-block;
+                            width: 18px;
+                            height: 18px;
+                            margin-right: 6px;
+                            &:before {
+                                position: absolute;
+                                top: 4px;
+                                left: 0;
+                                display: inline-block;
+                                content: "";
+                                width: 18px;
+                                height: 18px;
+                                background: url("/assets/images/book/icon-modified.png") center no-repeat;
+                                background-size: 18px 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
+/* ----------------------------------------------------------------------
+ 16.웹팝업_전집연계
+ (16_popup_all_books.html)
+----------------------------------------------------------------------- */
+.books-type-2 {
+    @extend .books-type-1;
+    div {
+        ul {
+            li {
+                figure {
+                    figcaption {
+                        p {
+                            &.img-title {
+                                font-size: rem(18px);
+                                color: #ee4742;
+                                text-align: left !important;
+                            }
+                            &.img-caption {
+                                width: 204px;
+                                @include ellipsis(2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
