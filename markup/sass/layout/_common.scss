@@ -60,6 +60,20 @@ html {
     cursor: pointer;
 }
 
+// 버튼 스타일
+// 완료
+.btn-completion {
+    @include btn($bg: #f46157, $bd: #ed3a34);
+}
+// 취소
+.btn-cancel {
+    @include btn($bg: #a9a9ab, $bd: #9a999b);
+}
+// 저장
+.btn-save {
+    @extend .btn-completion;
+}
+
 // 라벨 설정
 [class^="lable-"] {
     display: inline-block;
@@ -68,19 +82,24 @@ html {
     font-family: $font-title-m;
     font-size: rem(22px);
 }
+// 과학
 .lable-science {
     @include btn($bg:$yellow);
 }
+// 예체능
 .lable-arts {
     @include btn($bg:$orange);
 }
+// 사회
 .lable-social {
     @include btn($bg:$purple);
     line-height: 1.55;
 }
+// 국어
 .lable-korean {
     @include btn($bg:$light-green);
 }
+// 수학
 .lable-math {
     @include btn($bg:$sky-blue);
 }
@@ -88,12 +107,9 @@ html {
 // 팝업 설정
 .pop-wrap {
     @include wh-center ($position: absolute, $h-percent: 50%, $w-percent: 50%);
-    width: -webkit-calc( 100% - 300px );
-    width: -moz-calc( 100% - 300px );
-    width: calc( 100% - 300px );
-    height: 586px;
     min-width: 906px;
     max-width: 906px;
+    height: 586px;
     background: #fff;
     overflow-y: auto;
     .title {
@@ -114,6 +130,15 @@ html {
         padding-top: 30px;
         &:nth-of-type(1) {
             padding-top: 50px;
+        }
+        .messge {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 27px;
+            font-size: rem(18px);
+            color: #f56056;
+            text-align: center;
         }
     }
 }
