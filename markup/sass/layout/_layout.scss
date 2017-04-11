@@ -439,8 +439,8 @@
     .thumbnail {
         float: left;
         img {
-            @include w-center;
             object-fit: cover;
+            object-position: center;
         }
         .img {
             width: 376px;
@@ -448,8 +448,8 @@
             border: 1px solid #b8b8b8;
             overflow: hidden;
             img {
-                @include w-center;
                 object-fit: cover;
+                object-position: center;
             }
         }
         figcaption {
@@ -808,8 +808,8 @@
                                 overflow: hidden;
                                 border: 1px solid #ccc;
                                 img {
-                                    @include h-center;
                                     object-fit: cover;
+                                    object-position: center;
                                 }
                             }
                             .text-area {
@@ -888,6 +888,7 @@
                             width: auto;
                             height: 100%;
                             object-fit: cover;
+                            object-position: center;
                         }
                     }
                 }
@@ -920,6 +921,7 @@
                             video {
                                 border-radius: 8px;
                                 object-fit: cover;
+                                object-position: center;
                             }
                         }
                         &.selected, &:hover, &:focus, &:active {
@@ -1005,13 +1007,14 @@
                         background: #000;
                         overflow: hidden;
                         video {
-                            @include h-center;
-                            width: 100%;
-                            height: auto;
+                            @include w-center;
+                            width: auto;
+                            height: 100%;
                         }
                         img {
                             @include w-center;
                             object-fit: cover;
+                            object-position: center;
                         }
                     }
                     figcaption {
@@ -1385,8 +1388,8 @@
                             border-radius: 8px;
                             overflow: hidden;
                             img {
-                                @include w-center;
                                 object-fit: cover;
+                                object-position: right;
                             }
                             &.make {
                                 position: relative;
