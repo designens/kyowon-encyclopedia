@@ -1,3 +1,4 @@
+// 탭 제작 (탭 갯수)
 @mixin tabs($num-of-tabs) {
     .slide {
         width: calc(100% / #{$num-of-tabs});
