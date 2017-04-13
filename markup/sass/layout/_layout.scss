@@ -1887,10 +1887,26 @@
                 font-size: rem(24px);
                 [class*="order"] {
                     position: absolute;
-                    width: 220px;
+                    min-width: 100px;
+                    max-width: 230px;
                     @include ellipsis(2);
+                    text-align: justify;
                     -webkit-animation-duration: 1.5s;
                     animation-duration: 1.5s;
+                    &.bounceln {
+                        animation: bounceIn 2s;
+                        @keyframes bounceIn {
+                            0% {
+                                transform: scale(1);
+                            }
+                            60% {
+                                transform: scale(1.15);
+                            }
+                            100% {
+                              transform: scale(1);
+                            }
+                      }
+                    }
                 }
                 .order-1 {
                     top: -8px;
