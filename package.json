@@ -11,7 +11,7 @@
     "browser-sync": "^2.18.6",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
-    "gulp-csso": "^1.0.0",
+    "gulp-csso": "^1.1.0",
     "gulp-filter": "^2.0.2",
     "gulp-html-ssi": "^0.0.92",
     "gulp-iconfont": "^3.0.2",

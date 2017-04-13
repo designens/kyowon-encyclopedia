@@ -68,26 +68,13 @@
     });
 
     // 가로 스크롤 배너
-    // [참고] http://codepen.io/eldadfux/pen/zGpwdP
-    var element     = doc.getElementById('scrolling'),
-          wrapper     = doc.createElement('div'),
+    var element     = $('#scrolling'),
+          wrapper     = element.wrap('<div style="overflow: auto;">'),
 
           getCurrentFold = function(scroll, width) {
               return Math.ceil(width / scroll);
           },
 
           folds = Math.ceil(element.offsetWidth / wrapper.offsetWidth);
-
-      // Apply styles
-      wrapper.style.overflow = 'auto';
-
-      // Add 'virtual' DOM elements
-      element.parentNode.replaceChild(wrapper, element);
-      wrapper.appendChild(element);
-
-
-      wrapper.addEventListener('scroll', function() {
-          console.log(getCurrentFold(wrapper.scrollLeft + wrapper.offsetWidth, element.offsetWidth));
-      });
 
 })(window, document, window.jQuery);
