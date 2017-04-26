@@ -798,6 +798,9 @@
                             &:first-child {
                                 border-top: 0;
                             }
+                            &:hover, &:focus {
+                                background: hsla(0, 0%, 0%, 0.05);
+                            }
                             h5 {
                                 margin-bottom: 10px;
                             }
@@ -1699,34 +1702,34 @@
                 }
             }
             hr {
-                &.left-60 {
+                &.left-order-1 {
                     top: 113px;
                     right: -56px;
                     -ms-transform: rotate(60deg);
                     -webkit-transform: rotate(60deg);
                     transform: rotate(60deg);
                 }
-                &.left-30 {
+                &.left-order-2 {
                     top: 156px;
                     right: -15px;
                     -ms-transform: rotate(30deg);
                     -webkit-transform: rotate(30deg);
                     transform: rotate(30deg);
                 }
-                &.left-0 {
+                &.left-order-3 {
                     top: 212px;
                     right: 0;
                     -ms-transform: rotate(0deg);
                     -webkit-transform: rotate(0deg);
                 }
-                &.left--30 {
+                &.left-order-4 {
                     top: 269px;
                     right: -15px;
                     -ms-transform: rotate(-30deg);
                     -webkit-transform: rotate(-30deg);
                     transform: rotate(-30deg);
                 }
-                &.left--60 {
+                &.left-order-5 {
                     top: 312px;
                     right: -56px;
                     -ms-transform: rotate(-60deg);
@@ -1761,7 +1764,7 @@
                 }
             }
             hr {
-                &.right--60 {
+                &.right-order-6 {
                     top: 113px;
                     left: -56px;
                     -ms-transform: rotate(-60deg);
@@ -1772,7 +1775,7 @@
                         left: 207px;
                     }
                 }
-                &.right--30 {
+                &.right-order-7 {
                     top: 156px;
                     left: -15px;
                     -ms-transform: rotate(-30deg);
@@ -1783,7 +1786,7 @@
                         left: 200px;
                     }
                 }
-                &.right-0 {
+                &.right-order-8 {
                     top: 212px;
                     left: 0;
                     -ms-transform: rotate(0deg);
@@ -1794,7 +1797,7 @@
                         left: 202px;
                     }
                 }
-                &.right-30 {
+                &.right-order-9 {
                     top: 269px;
                     left: -15px;
                     -ms-transform: rotate(30deg);
@@ -1805,7 +1808,7 @@
                         left: 200px;
                     }
                 }
-                &.right-60 {
+                &.right-order-10 {
                     top: 312px;
                     left: -56px;
                     -ms-transform: rotate(60deg);
