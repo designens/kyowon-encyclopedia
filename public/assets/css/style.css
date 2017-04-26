@@ -3008,10 +3008,6 @@ http://flickity.metafizzy.co
 
 .slideOutUp { -webkit-animation-name: slideOutUp; animation-name: slideOutUp; }
 
-@font-face { font-family: 'SangSangTitleB'; src: url("../../assets/fonts/SangSangTitleB.eot"); src: url("../../assets/fonts/SangSangTitleB.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SangSangTitleB.woff") format("woff"); font-weight: normal; font-style: normal; }
-
-@font-face { font-family: 'SangSangTitleM'; src: url("../../assets/fonts/SangSangTitleM.eot"); src: url("../../assets/fonts/SangSangTitleM.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SangSangTitleM.woff") format("woff"); font-weight: normal; font-style: normal; }
-
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, figure, legend, input, textarea, button, p, blockquote, th, td, form, fieldset, blockquote, iframe { margin: 0; padding: 0; -moz-text-size-adjust: none; -ms-text-size-adjust: none; -webkit-text-size-adjust: none; text-size-adjust: none; }
 
 article, aside, canvas, details, embed, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
@@ -3072,6 +3068,16 @@ input:-moz-placeholder { color: #4a4a4a; }
 
 .pop-wrap .wrap:after, .sub-menu ul:after, .sub-dd-menu ul:after, .search-menu .search-area:after, .search-tab .search-area:after, .search-menu .keyword-btn-set:after, .search-tab .keyword-btn-set:after, .search-menu .keyword:after, .search-tab .keyword:after, .search-menu .keyword li:after, .search-tab .keyword li:after, .curriculum .wrap .col-text-box ul:after, .sub-view footer:after, .books-type-1 .wrap div ul li:after, .books-type-2 .wrap div ul li:after, .books-type-3 .wrap div ul li:after, .books-type-3 .wrap dl:after { content: ''; display: block; clear: both; }
 
+@font-face { font-family: 'SangSangTitleB'; src: url("../../assets/fonts/SangSangTitleB.eot"); src: url("../../assets/fonts/SangSangTitleB.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SangSangTitleB.woff") format("woff"); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'SangSangTitleM'; src: url("../../assets/fonts/SangSangTitleM.eot"); src: url("../../assets/fonts/SangSangTitleM.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/SangSangTitleM.woff") format("woff"); font-weight: normal; font-style: normal; }
+
+html { font-family: "Noto Sans", sans-serif; font-size: 10px; }
+
+html body { font-size: 2.4rem; color: #4a4a4a; line-height: 1.5; }
+
+html body * { box-sizing: border-box; word-wrap: break-word; }
+
 h1, h2, h3, h4, h5, h6 { line-height: 1; }
 
 h1 { font-size: 60px; font-size: 6rem; }
@@ -3105,12 +3111,6 @@ h6 { font-size: 16px; font-size: 1.6rem; }
   min-height: 100vh;
   min-zoom: 1;
   max-zoom: 1; }
-
-html { font-family: "Noto Sans", sans-serif; font-size: 10px; }
-
-html body { font-size: 2.4rem; color: #4a4a4a; line-height: 1.5; }
-
-html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .fl { float: left; }
 
@@ -3157,6 +3157,17 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 .pop-wrap .wrap:nth-of-type(1) { padding-top: 50px; }
 
 .pop-wrap .wrap .messge { position: absolute; left: 0; right: 0; bottom: 27px; font-size: 1.8rem; color: #f56056; text-align: center; }
+
+@keyframes loading { 0% { transform-origin: 100% 100%;
+    transform: rotate(0deg); }
+  100% { transform-origin: 100% 100%;
+    transform: rotate(360deg); } }
+
+.search-tab .tab-area .tab-label-content .tab-content .loading { position: absolute; display: block; z-index: 13; margin: 15px auto; width: 100px; height: 100px; border: 5px solid transparent; border-radius: 50%; background-color: transparent; }
+
+.search-tab .tab-area .tab-label-content .tab-content .loading:before { position: absolute; display: block; content: ''; z-index: 12; top: 4px; left: 4px; width: 82px; height: 82px; border-radius: 50%; background-color: #fff; }
+
+.search-tab .tab-area .tab-label-content .tab-content .loading:after { position: absolute; display: block; top: 0; content: ''; z-index: 11; top: 0px; left: 0px; width: 45px; height: 45px; border-radius: 200px 0 0 0; background: linear-gradient(45deg, transparent 0%, #459ad7 90%, #459ad7 100%); animation: loading .9s linear infinite; }
 
 /* ----------------------------------------------------------------------
  07-4.내책읽기,
@@ -3429,6 +3440,8 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .search-tab .tab-area .tab-label-content .tab-content { position: absolute; top: 120px; display: none; height: -webkit-calc( 100vh - 230px); height: -moz-calc( 100vh - 230px); height: calc( 100vh - 230px); overflow-y: auto; }
 
+.search-tab .tab-area .tab-label-content .tab-content .loading { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
 .search-tab .tab-area .slide { width: calc(100% / 3); }
 
 .search-tab .tab-area:nth-of-type(1):checked ~ .slide { left: calc((100% / 3) * 0); }
@@ -3471,11 +3484,11 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .search-tab .tab-area label[for="tab3"]:before { background: url("../../assets/images/common/icon-tab-video-off.png") bottom center no-repeat; }
 
-.search-tab .tab-area .tab-label-content .tab-content.Integrated ul li { padding: 20px 31px 15px 31px; border-top: 1px solid #eaeaea; }
+.search-tab .tab-area .tab-label-content .tab-content.Integrated ul li { position: relative; padding: 20px 31px 15px 31px; border-top: 1px solid #eaeaea; }
 
 .search-tab .tab-area .tab-label-content .tab-content.Integrated ul li:first-child { border-top: 0; }
 
-.search-tab .tab-area .tab-label-content .tab-content.Integrated ul li:hover, .search-tab .tab-area .tab-label-content .tab-content.Integrated ul li:focus { background: rgba(0, 0, 0, 0.05); }
+.search-tab .tab-area .tab-label-content .tab-content.Integrated ul li:hover:before, .search-tab .tab-area .tab-label-content .tab-content.Integrated ul li:hover::before, .search-tab .tab-area .tab-label-content .tab-content.Integrated ul li:focus:before, .search-tab .tab-area .tab-label-content .tab-content.Integrated ul li:focus::before { position: absolute; top: 0; left: 0; bottom: 0; right: 0; display: block; content: ''; background: rgba(0, 0, 0, 0.1); z-index: 1; }
 
 .search-tab .tab-area .tab-label-content .tab-content.Integrated ul li h5 { margin-bottom: 10px; }
 
@@ -3623,13 +3636,15 @@ html body * { box-sizing: border-box; word-wrap: break-word; }
 
 .sub-dd-menu h2 { position: relative; padding-left: 66px; }
 
-.sub-dd-menu h2:before { position: absolute; top: 28px; left: 28px; display: inline-block; content: ""; width: 26px; height: 26px; background: url("../../assets/images/common/btn-dd-delete.png") center no-repeat; background-size: 26px 26px; }
+.sub-dd-menu h2 .btn-delete { position: absolute; top: 28px; left: 28px; display: inline-block; content: ""; width: 26px; height: 26px; background: url("../../assets/images/common/btn-dd-delete.png") center no-repeat; background-size: 26px 26px; }
 
 .sub-dd-menu ul.dreg-drop li.sortable-placeholder { min-height: 60px; padding-top: 0; padding-bottom: 0; overflow: hidden; border-bottom: 1px solid #ccc; box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
 
 .sub-dd-menu ul.dreg-drop li { position: relative; padding: 13px 60px 13px 38px; border-top: 1px solid #ccc; min-height: 60px; line-height: 60px; overflow: hidden; cursor: pointer; }
 
-.sub-dd-menu ul.dreg-drop li:before { position: absolute; top: 50%; left: 30px; display: inline-block; content: ""; width: 20px; height: 20px; margin-top: -10px; background: url("../../assets/images/common/btn-dd-delete.png") center no-repeat; background-size: 20px 20px; }
+.sub-dd-menu ul.dreg-drop li .btn-delete { position: absolute; top: 50%; left: 30px; display: inline-block; content: ""; width: 20px; height: 20px; margin-top: -10px; background: url("../../assets/images/common/btn-dd-delete.png") center no-repeat; background-size: 20px 20px; }
+
+.sub-dd-menu ul.dreg-drop li:before { content: ""; }
 
 .sub-dd-menu ul.dreg-drop li:after { position: absolute; top: 50%; right: 25px; display: inline-block; content: ""; width: 24px; height: 24px; margin-top: -12px; background: url("../../assets/images/svg/btn-dd-move.svg") center no-repeat; background-size: 24px 24px; }
 

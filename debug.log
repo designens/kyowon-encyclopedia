@@ -1,0 +1,18 @@
+[0426/152206.393:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files (x86)\Google\Chrome\settings.dat: 액세스가 거부되었습니다. (0x5)
+[0426/152206.523:ERROR:registration_protocol_win.cc(83)] TransactNamedPipe: 파이프가 끝났습니다. (0x6D)
+[0426/152206.523:ERROR:crashpad_win.cc(223)] Crashpad handler failed to start, crash reporting disabled
+[0426/152833.876:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files (x86)\Google\Chrome\settings.dat: 액세스가 거부되었습니다. (0x5)
+[0426/152833.970:ERROR:registration_protocol_win.cc(83)] TransactNamedPipe: 파이프가 끝났습니다. (0x6D)
+[0426/152833.985:ERROR:crashpad_win.cc(223)] Crashpad handler failed to start, crash reporting disabled
+[0426/153018.384:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files (x86)\Google\Chrome\settings.dat: 액세스가 거부되었습니다. (0x5)
+[0426/153018.478:ERROR:registration_protocol_win.cc(83)] TransactNamedPipe: 파이프가 끝났습니다. (0x6D)
+[0426/153018.478:ERROR:crashpad_win.cc(223)] Crashpad handler failed to start, crash reporting disabled
+[0426/153706.663:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files (x86)\Google\Chrome\settings.dat: 액세스가 거부되었습니다. (0x5)
+[0426/153706.772:ERROR:registration_protocol_win.cc(83)] TransactNamedPipe: 파이프가 끝났습니다. (0x6D)
+[0426/153706.772:ERROR:crashpad_win.cc(223)] Crashpad handler failed to start, crash reporting disabled
+[0426/161108.950:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files (x86)\Google\Chrome\settings.dat: 액세스가 거부되었습니다. (0x5)
+[0426/161109.044:ERROR:registration_protocol_win.cc(83)] TransactNamedPipe: 파이프가 끝났습니다. (0x6D)
+[0426/161109.044:ERROR:crashpad_win.cc(223)] Crashpad handler failed to start, crash reporting disabled
+[0426/161839.404:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files (x86)\Google\Chrome\settings.dat: 액세스가 거부되었습니다. (0x5)
+[0426/161839.498:ERROR:registration_protocol_win.cc(83)] TransactNamedPipe: 파이프가 끝났습니다. (0x6D)
+[0426/161839.498:ERROR:crashpad_win.cc(223)] Crashpad handler failed to start, crash reporting disabled

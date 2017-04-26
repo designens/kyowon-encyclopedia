@@ -1,11 +1,42 @@
+/*! style.css v1.0.0 © inyoung524@naver.com */
+
+@charset "utf-8";
+
 // =======================================
-// Style Common
+// Framework import
 // =======================================
-@import "style";
+@import "../sass/lib/susy/susy";
+
+// =======================================
+// Base Design
+// =======================================
+@import "../sass/base/color-system";
+@import "../sass/base/reset-css";
+@import "../sass/base/susy-settings";
+
+// =======================================
+// Function
+// =======================================
+@import "../sass/function/retina";
+@import "../sass/function/px-rem";
+
+// =======================================
+// Mixin
+// =======================================
+@import "../sass/mixin/psd-fz";
+@import "../sass/mixin/heading";
+
+// =======================================
+// Typography
+// =======================================
+@import "../sass/fonts/font-settings";
+@import "../sass/fonts/typography";
+
 
 // =======================================
 // Guide Style
 // =======================================
+
 body {
     background: #ededed !important;
     font-size: rem(16px) !important;
@@ -58,6 +89,11 @@ body {
                 }
                 a {
                     color: #333;
+                    > span {
+                        display: inline-block;
+                        color: #e51d68;
+                        margin-left: 4px;
+                    }
                 }
                 span {
                     font-size: rem(12px);
