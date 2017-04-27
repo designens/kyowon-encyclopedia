@@ -295,10 +295,12 @@
     .accordion-item {
         &.js-open {
             .accordion-title {
-                cursor: default;
                 &:after {
                     background: url($btn-accordion-open) top right no-repeat;
                 }
+            }
+            .accordion-copy {
+                display: block;
             }
         }
         .accordion-title {
@@ -343,9 +345,6 @@
                 margin-top: 20px;
                 margin-bottom: 20px;
             }
-        }
-        .accordion-copy-open {
-            display: block;
         }
     }
 }
@@ -698,8 +697,12 @@
                 height: -moz-calc( 100vh - 230px );
                 height: calc( 100vh - 230px );
                 overflow-y: auto;
-                .loading {
-                    @extend %loading;
+                .loader-spin {
+                    @include loader(
+                        $circle: circle,
+                        $circle-bg: "../../assets/images/common/loading-spin.png",
+                        $logo: character,
+                        $logo-bg: "../../assets/images/common/loading-character.png");
                     @include wh-center ($position: absolute);
                 }
             }

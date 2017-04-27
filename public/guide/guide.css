@@ -91,7 +91,7 @@ body { background: #ededed !important; font-size: 1.6rem !important; height: 100
 
 .wrap:after { content: " "; display: block; clear: both; }
 
-.wrap article .title { font-family: "SangSangTitleB", sans-serif; color: #1566c1; }
+.wrap article .title { font-size: 3rem; font-weight: bold; color: #1566c1; }
 
 .wrap article .title:before { content: "\f013"; font-family: FontAwesome; font-size: 2.4rem; color: #1566c1; padding-right: 1rem; }
 
@@ -103,11 +103,11 @@ body { background: #ededed !important; font-size: 1.6rem !important; height: 100
 
 .wrap .all-link .location p.check:before { content: "\f00c"; color: #e51d68; }
 
-.wrap .all-link .location p:before { content: "\f0c1"; font-family: FontAwesome; font-size: 1rem; color: #ccc; padding-right: 0.5rem; }
+.wrap .all-link .location p:before { content: "\f0c1"; font-family: FontAwesome; font-size: 1rem; color: #ccc; padding-right: 0.5rem; vertical-align: top; }
 
-.wrap .all-link .location p a { color: #333; }
+.wrap .all-link .location p a { color: #333; display: inline-block; }
 
-.wrap .all-link .location p a > span { display: inline-block; color: #e51d68; margin-left: 4px; }
+.wrap .all-link .location p a > span { display: inline-block; color: #e51d68; margin-left: 4px; margin-bottom: 0; }
 
 .wrap .all-link .location p span { font-size: 1.2rem; color: #aaa; display: block; margin-left: 20px; margin-bottom: 10px; }
 
