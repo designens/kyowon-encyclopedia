@@ -142,16 +142,48 @@
         @extend %clearfix;
         padding: 28px 30px 0 30px;
         .btn-new-search {
-            font-size: rem(18px);
-            color: #0f9fff;
+            span {
+                float: left;
+                font-size: rem(18px);
+                color: #0f9fff;
+                line-height: 32px;
+            }
+            [class^="btn-"] {
+                float: left;
+                width: 60px;
+                height: 32px;
+                font-size: 18px;
+                color: #4a4a4a;
+                border: 1px solid #d8d8d8;
+                &.active {
+                    color: #888;
+                    background: #efefef;
+                }
+            }
+            .btn-on {
+                margin-left: 40px;
+                border-top-left-radius: 6px;
+                border-bottom-left-radius: 6px;
+                &.active {
+                     box-shadow: -1px 0 2px 0 hsla(0, 0%, 0%, 0.1) inset;
+                }
+            }
+
+            .btn-off {
+                margin-left: -1px;
+                border-top-right-radius: 6px;
+                border-bottom-right-radius: 6px;
+                &.active {
+                     box-shadow: 1px 0 2px 0 hsla(0, 0%, 0%, 0.1) inset;
+                }
+            }
         }
         .delete-area {
-            margin-top: -5px;
             span {
                 font-size: rem(18px);
                 color: #888;
-                height: 26px;
-                line-height: 26px;
+                height: 32px;
+                line-height: 32px;
                 vertical-align: 5px;
             }
             .btn-delete {
@@ -162,6 +194,7 @@
                 background: #a9a9ab;
                 border: 1px solid #9a999b;
                 vertical-align: text-top;
+                margin-top: 1px;
                 margin-left: 15px;
                 &:before {
                     display: inline-block;
