@@ -1837,6 +1837,9 @@
                     &:after {
                         top: 6px;
                         left: 207px;
+                        -ms-transform: rotate(60deg);
+                        -webkit-transform: rotate(60deg);
+                        transform: rotate(60deg);
                     }
                 }
                 &.right-order-7 {
@@ -1848,6 +1851,9 @@
                     &:after {
                         top: -8px;
                         left: 200px;
+                        -ms-transform: rotate(30deg);
+                        -webkit-transform: rotate(30deg);
+                        transform: rotate(30deg);
                     }
                 }
                 &.right-order-8 {
@@ -1859,6 +1865,9 @@
                     &:after {
                         top: -13px;
                         left: 202px;
+                        -ms-transform: rotate(0deg);
+                        -webkit-transform: rotate(0deg);
+                        transform: rotate(0deg);
                     }
                 }
                 &.right-order-9 {
@@ -1870,6 +1879,9 @@
                     &:after {
                         top: -18px;
                         left: 200px;
+                        -ms-transform: rotate(-30deg);
+                        -webkit-transform: rotate(-30deg);
+                        transform: rotate(-30deg);
                     }
                 }
                 &.right-order-10 {
@@ -1881,6 +1893,9 @@
                     &:after {
                         top: -33px;
                         left: 204px;
+                        -ms-transform: rotate(-60deg);
+                        -webkit-transform: rotate(-60deg);
+                        transform: rotate(-60deg);
                     }
                 }
             }
@@ -1895,9 +1910,6 @@
                 &.science {
                     &:after {
                         content: "과학";
-                        -ms-transform: rotate(60deg);
-                        -webkit-transform: rotate(60deg);
-                        transform: rotate(60deg);
                         background: $yellow;
                     }
                 }
@@ -1905,9 +1917,6 @@
                 &.arts {
                     &:after {
                         content: "예체능";
-                        -ms-transform: rotate(30deg);
-                        -webkit-transform: rotate(30deg);
-                        transform: rotate(30deg);
                         background: $orange;
                     }
                 }
@@ -1915,9 +1924,6 @@
                 &.social {
                     &:after {
                         content: "사회";
-                        -ms-transform: rotate(0deg);
-                        -webkit-transform: rotate(0deg);
-                        transform: rotate(0deg);
                         background: $purple;
                     }
                 }
@@ -1925,9 +1931,6 @@
                 &.korean {
                     &:after {
                         content: "국어";
-                        -ms-transform: rotate(-30deg);
-                        -webkit-transform: rotate(-30deg);
-                        transform: rotate(-30deg);
                         background: $light-green;
                     }
                 }
@@ -1935,9 +1938,6 @@
                 &.math {
                     &:after {
                         content: "수학";
-                        -ms-transform: rotate(-60deg);
-                        -webkit-transform: rotate(-60deg);
-                        transform: rotate(-60deg);
                         background: $sky-blue;
                     }
                 }
