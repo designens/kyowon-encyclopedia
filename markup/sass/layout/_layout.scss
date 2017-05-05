@@ -138,7 +138,8 @@
         .btn-search {
             position: absolute;
             right: 30px;
-            @include btn($fz:24px, $color:#fff, $width:98px, $height:50px, $bg:#f56056,$radius:25px);
+            @include btn($width:98px, $height:50px, $radius:25px)
+            @include btn-type($fz:24px, $color:#fff, $bg:#f56056);
             border: 1px solid #ec352f;
         }
     }
@@ -251,13 +252,14 @@
             float: left;
         }
         .col-icon-box {
-            margin-left: 36px;
-            margin-right: 36px;
+            width: 148px;
             .elementary-student {
+                @include w-center;
                 background-image: url($sprite-icon);
                 @include sprite($icon-elementary-student);
             }
             .middle-schooler {
+                @include w-center;
                 background-image: url($sprite-icon);
                 @include sprite($icon-middle-schooler);
             }
@@ -278,9 +280,9 @@
             }
         }
         .col-text-box {
-            width: -webkit-calc( 100% - 158px );
-            width: -moz-calc( 100% - 158px );
-            width: calc( 100% - 158px );
+            width: -webkit-calc( 100% - 148px );
+            width: -moz-calc( 100% - 148px );
+            width: calc( 100% - 148px );
             min-height: 100px;
             ul {
                 @extend %clearfix;
@@ -290,10 +292,23 @@
                     float: left;
                     display: inline-block;
                     font-size: rem(22px);
-                    &.lable {
+                    &:nth-of-type(1) {
+                        width: 68px;
+                        [class^="lable-"] {
+                            @include btn($width: 68px, $height: 29px, $radius: 6px);
+                        }
+                    }
+                    &:nth-of-type(2) {
                         font-family: $font-title-b;
-                        margin-left: 20px;
-                        margin-right: 30px;
+                        width: 132px;
+                        padding-left: 18px;
+                    }
+                    &:last-child {
+                        width: -webkit-calc( 100% - 200px );
+                        width: -moz-calc( 100% - 200px );
+                        width: calc( 100% - 200px );
+                        padding-left: 18px;
+                        padding-right: 36px;
                     }
                 }
             }
@@ -407,7 +422,8 @@
         h5 {
             padding-top: 38px;
             font-weight: bold;
-            .lable-social {
+            [class^="lable-"] {
+                @include btn($width: 68px, $height: 29px, $radius: 6px);
                 margin-right: 20px;
             }
             .sub-title {
@@ -1766,7 +1782,7 @@
                 }
             }
             hr {
-                &.left-order-1 {
+                &.left-order-4 {
                     top: 113px;
                     right: -56px;
                     -ms-transform: rotate(60deg);
@@ -1780,13 +1796,13 @@
                     -webkit-transform: rotate(30deg);
                     transform: rotate(30deg);
                 }
-                &.left-order-3 {
+                &.left-order-1 {
                     top: 212px;
                     right: 0;
                     -ms-transform: rotate(0deg);
                     -webkit-transform: rotate(0deg);
                 }
-                &.left-order-4 {
+                &.left-order-3 {
                     top: 269px;
                     right: -15px;
                     -ms-transform: rotate(-30deg);
@@ -1828,7 +1844,7 @@
                 }
             }
             hr {
-                &.right-order-6 {
+                &.right-order-9 {
                     top: 113px;
                     left: -56px;
                     -ms-transform: rotate(-60deg);
@@ -1856,7 +1872,7 @@
                         transform: rotate(30deg);
                     }
                 }
-                &.right-order-8 {
+                &.right-order-6 {
                     top: 212px;
                     left: 0;
                     -ms-transform: rotate(0deg);
@@ -1870,7 +1886,7 @@
                         transform: rotate(0deg);
                     }
                 }
-                &.right-order-9 {
+                &.right-order-8 {
                     top: 269px;
                     left: -15px;
                     -ms-transform: rotate(30deg);

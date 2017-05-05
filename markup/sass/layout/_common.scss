@@ -48,11 +48,13 @@
 // 버튼 스타일
 // 완료
 .btn-completion {
-    @include btn($bg: #f46157, $bd: #ed3a34);
+    @include btn($radius: 20px);
+    @include btn-type($bg: #f46157, $bd: #ed3a34);
 }
 // 취소
 .btn-cancel {
-    @include btn($bg: #a9a9ab, $bd: #9a999b);
+    @include btn($radius: 20px);
+    @include btn-type($bg: #a9a9ab, $bd: #9a999b);
 }
 // 저장
 .btn-save {
@@ -69,24 +71,24 @@
 }
 // 과학
 .lable-science {
-    @include btn($bg:$yellow);
+    @include btn-type($bg:$yellow);
 }
 // 예체능
 .lable-arts {
-    @include btn($bg:$orange);
+    @include btn-type($bg:$orange);
 }
 // 사회
 .lable-social {
-    @include btn($bg:$purple);
-    line-height: 1.55;
+    @include btn-type($bg:$purple);
+    line-height: 1.6 !important;
 }
 // 국어
 .lable-korean {
-    @include btn($bg:$light-green);
+    @include btn-type($bg:$light-green);
 }
 // 수학
 .lable-math {
-    @include btn($bg:$sky-blue);
+    @include btn-type($bg:$sky-blue);
 }
 
 // 팝업 설정
