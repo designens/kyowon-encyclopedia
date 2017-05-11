@@ -111,9 +111,9 @@ gulp.task('build', function() {
     gulp.start('sass');
     gulp.start('sass:guide');
     gulp.start('js');
+    gulp.start('imagemin');
     gulp.start('sprites');
     gulp.start('font:move');
-    gulp.start('imagemin');
     setTimeout(function() {
         gulp.start('css:min');
     }, 7000);
@@ -136,7 +136,7 @@ gulp.task('watch', function() {
 // =======================================
 // 폴더 제거 업무
 // =======================================
-gulp.task('remove', shell.task('rm -rf ' + BUILD + ' ' + BUILD + '/assets/css/map ' + BUILD + '/assets/css/style.css'));
+gulp.task('remove', shell.task('rm -rf ' + BUILD + ' ' + BUILD + '/assets/css/map' + BUILD + '/assets/css/style.css'));
 
 // =======================================
 // 서버 업무
@@ -146,7 +146,7 @@ gulp.task('server', ['htmlSSI', 'sass', 'sass:guide', 'js', 'imagemin', 'sprites
         // 알림 설정
         notify: !true,
         // 포트 설정
-        port: 9090,
+        port: 9091,
         // 서버 설정
         server: {
             // 기본 디렉토리 설정
