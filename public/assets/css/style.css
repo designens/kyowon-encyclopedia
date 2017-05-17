@@ -3898,7 +3898,9 @@ h6 { font-size: 16px; font-size: 1.6rem; }
 
 .information .tab-area .tab-wrap { position: inherit; width: 600px; margin: 0 auto; }
 
-.information .tab-area .tab-wrap .tab-label-content .tab-content.notice-ber { height: -webkit-calc( 100vh - 186px); height: -moz-calc( 100vh - 186px); height: calc( 100vh - 186px); overflow-y: visible; }
+.information .tab-area .tab-wrap .tab-label-content .tab-content { height: -webkit-calc( 100vh - 186px); height: -moz-calc( 100vh - 186px); height: calc( 100vh - 186px); }
+
+.information .tab-area .tab-wrap .tab-label-content .tab-content.notice-ber { overflow-y: visible; }
 
 .information .tab-area .tab-wrap .tab-label-content .tab-content.notice-ber ul { height: -webkit-calc( 100vh - 242px); height: -moz-calc( 100vh - 242px); height: calc( 100vh - 242px); overflow-y: auto; }
 
@@ -3934,9 +3936,9 @@ h6 { font-size: 16px; font-size: 1.6rem; }
 
 .information .tab-area .tab-label-content .tab-content [class$="-list"] li:last-child { border-bottom: 0; }
 
-.information .tab-area .tab-label-content .tab-content .info-list li h4 { font-size: 2.4rem; padding-left: 30px; background: url("../../assets/images/common/icon-list-title.png") left center no-repeat; }
+.information .tab-area .tab-label-content .tab-content .info-list li h4 { font-size: 2.4rem; font-weight: bold; padding-left: 30px; background: url("../../assets/images/common/icon-list-title.png") left center no-repeat; }
 
-.information .tab-area .tab-label-content .tab-content .info-list li p { font-size: 2rem; color: #888; }
+.information .tab-area .tab-label-content .tab-content .info-list li p { font-size: 2rem; color: #888; text-align: justify; }
 
 .information .tab-area .tab-label-content .tab-content .copy-list li, .information .tab-area .tab-label-content .tab-content .text-list li { display: table; width: 100%; }
 
@@ -3948,10 +3950,26 @@ h6 { font-size: 16px; font-size: 1.6rem; }
 
 .information .tab-area .tab-label-content .tab-content .copy-list li div:last-child, .information .tab-area .tab-label-content .tab-content .text-list li div:last-child { font-size: 2rem; color: #888; text-align: justify; padding-left: 18px; }
 
-.information .tab-area .tab-label-content .tab-content .text-list h2 { line-height: 1.5; margin-top: 27px; margin-bottom: 13px; }
+.information .tab-area .tab-label-content .tab-content .text-list h2 { font-weight: bold; line-height: 1.5; margin-top: 27px; margin-bottom: 13px; }
 
 .information .tab-area .tab-label-content .tab-content .text-list h2 span { color: #fc4033; }
 
 .information .tab-area .tab-label-content .tab-content .text-list p { font-size: 2rem; color: #888; text-align: justify; }
+
+.information .tab-area .tab-label-content .tab-content .text-list ul li { border-bottom: 0; }
+
+.information .tab-area .tab-label-content .tab-content .text-list ul li div:nth-of-type(1) { width: 290px; }
+
+.information .tab-area .tab-label-content .tab-content .text-list ul li div:nth-of-type(2) { padding-left: 0; padding-bottom: 24px; border-bottom: 1px solid #dbdbdb; }
+
+.information .tab-area .tab-label-content .tab-content .text-list ul li div h5 { font-weight: bold; margin-bottom: 18px; }
+
+.information .tab-area .tab-label-content .tab-content .text-list ul li div h5.characte-01 { color: #653d24; }
+
+.information .tab-area .tab-label-content .tab-content .text-list ul li div h5.characte-02 { color: #16871d; }
+
+.information .tab-area .tab-label-content .tab-content .text-list ul li div h5.characte-03 { color: #e70031; }
+
+.information .tab-area .tab-label-content .tab-content .text-list ul li div h5.characte-04 { color: #a120bc; }
 
 /*# sourceMappingURL=map/style.css.map */

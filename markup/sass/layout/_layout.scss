@@ -2056,10 +2056,10 @@
             margin: 0 auto;
             .tab-label-content {
                 .tab-content {
+                    height: -webkit-calc( 100vh - 186px );
+                    height: -moz-calc( 100vh - 186px );
+                    height: calc( 100vh - 186px );
                     &.notice-ber {
-                        height: -webkit-calc( 100vh - 186px );
-                        height: -moz-calc( 100vh - 186px );
-                        height: calc( 100vh - 186px );
                         overflow-y: visible;
                         ul {
                             height: -webkit-calc( 100vh - 242px );
@@ -2185,12 +2185,14 @@
                     li {
                         h4 {
                             font-size: rem(24px);
+                            font-weight: bold;
                             padding-left: 30px;
                             background: url($icon-list-title) left center no-repeat;
                         }
                         p {
                             font-size: rem(20px);
                             color: #888;
+                            text-align: justify;
                         }
                     }
                 }
@@ -2221,6 +2223,7 @@
                 .text-list {
                     @extend .copy-list;
                     h2 {
+                        font-weight: bold;
                         line-height: 1.5;
                         margin-top: 27px;
                         margin-bottom: 13px;
@@ -2232,6 +2235,37 @@
                         font-size: rem(20px);
                         color: #888;
                         text-align: justify;
+                    }
+                    ul {
+                        li {
+                            border-bottom: 0;
+                            div {
+                                &:nth-of-type(1) {
+                                    width: 290px;
+                                }
+                                &:nth-of-type(2) {
+                                    padding-left: 0;
+                                    padding-bottom: 24px;
+                                    border-bottom: 1px solid #dbdbdb;
+                                }
+                                h5 {
+                                    font-weight: bold;
+                                    margin-bottom: 18px;
+                                    &.characte-01 {
+                                        color: #653d24;
+                                    }
+                                    &.characte-02 {
+                                        color: #16871d;
+                                    }
+                                    &.characte-03 {
+                                        color: #e70031;
+                                    }
+                                    &.characte-04 {
+                                        color: #a120bc;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
