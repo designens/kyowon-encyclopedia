@@ -322,13 +322,16 @@
 ----------------------------------------------------------------------- */
 .notice {
     .title {
+        position: relative;
         height: 65px;
         line-height: 65px;
         color: #fff;
         text-align: center;
         background: #f34a3c;
         .btn-notice-close {
-            float: right;
+            position: absolute;
+            top: 0;
+            right: 0;
             width: 65px;
             height: 65px;
             &:after {
@@ -787,7 +790,7 @@
                         }
                         &[for="tab1"] {
                             &:before {
-                                background: url($icon-tab-Integrated-on) bottom center no-repeat;
+                                background: url($icon-tab-integrated-on) bottom center no-repeat;
                             }
                         }
                         &[for="tab2"] {
@@ -835,7 +838,7 @@
             }
             &[for="tab1"] {
                 &:before {
-                    background: url($icon-tab-Integrated-off) bottom center no-repeat;
+                    background: url($icon-tab-integrated-off) bottom center no-repeat;
                 }
             }
             &[for="tab2"] {
@@ -856,7 +859,7 @@
     .tab-area {
         .tab-label-content {
             .tab-content {
-                &.Integrated {
+                &.integrated {
                     ul {
                         li {
                             position: relative;
@@ -2030,6 +2033,206 @@
                 .order-10 {
                     top: 391px;
                     left: 183px;
+                }
+            }
+        }
+    }
+}
+
+/* ----------------------------------------------------------------------
+ 31.제작정보
+ (30_notice-list.html)
+----------------------------------------------------------------------- */
+.information {
+    @extend .notice;
+    @extend .search-tab;
+    width: 100%;
+    .tab-area {
+        position: relative;
+        @include tabs(3);
+        .tab-wrap {
+            position: inherit;
+            width: 600px;
+            margin: 0 auto;
+            .tab-label-content {
+                .tab-content {
+                    &.notice-ber {
+                        height: -webkit-calc( 100vh - 186px );
+                        height: -moz-calc( 100vh - 186px );
+                        height: calc( 100vh - 186px );
+                        overflow-y: visible;
+                        ul {
+                            height: -webkit-calc( 100vh - 242px );
+                            height: -moz-calc( 100vh - 242px );
+                            height: calc( 100vh - 242px );
+                            overflow-y: auto;
+                        }
+                    }
+                }
+            }
+        }
+        input[type="radio"][name="tabs"] {
+            &:checked {
+                + .tab-label-content {
+                    label {
+                        &:after {
+                            display: block;
+                            content:"";
+                            width: 114px;
+                            margin: 0 auto;
+                            margin-top: -3px;
+                            border-bottom: 2px solid #f56056;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.information {
+    .tab-area {
+        input[type="radio"][name="tabs"] {
+            &:checked {
+                + .tab-label-content {
+                    label {
+                        &[for="tab1"] {
+                            &:before {
+                                background: url($icon-tab-author-on) bottom center no-repeat;
+                            }
+                        }
+                        &[for="tab2"] {
+                            &:before {
+                                background: url($icon-tab-copyright-on) bottom center no-repeat;
+                            }
+                        }
+                        &[for="tab3"] {
+                            &:before {
+                                background: url($icon-tab-character-on) bottom center no-repeat;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        label {
+            &[for="tab1"] {
+                &:before {
+                    background: url($icon-tab-author-off) bottom center no-repeat;
+                }
+            }
+            &[for="tab2"] {
+                &:before {
+                    background: url($icon-tab-copyright-off) bottom center no-repeat;
+                }
+            }
+            &[for="tab3"] {
+                &:before {
+                    background: url($icon-tab-character-off) bottom center no-repeat;
+                }
+            }
+        }
+    }
+}
+
+.information {
+    .tab-area {
+        position: inherit;
+        .tab-label-content {
+            .tab-content {
+                top: 186px;
+                .notice {
+                    font-size: rem(18px);
+                    color: #888;
+                    text-align: center;
+                    height: 56px;
+                    line-height: 56px;
+                    background: #f9f9f9;
+                    span {
+                        color: #ee4742;
+                        &.icon {
+                            display: inline-block;
+                            width: 20px;
+                            height: 20px;
+                            margin-right: 5px;
+                            vertical-align: -3px;
+                            background: url($icon-notice) center no-repeat;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.information {
+    .tab-area {
+        .tab-label-content {
+            .tab-content {
+                [class$="-list"] {
+                    padding: 0 45px;
+                    h4 {
+                        margin-bottom: 12px;
+                    }
+                    li {
+                        padding-top: 22px;
+                        padding-bottom: 24px;
+                        border-bottom: 1px solid #dbdbdb;
+                        &:last-child {
+                            border-bottom: 0;
+                        }
+                    }
+                }
+                .info-list {
+                    li {
+                        h4 {
+                            font-size: rem(24px);
+                            padding-left: 30px;
+                            background: url($icon-list-title) left center no-repeat;
+                        }
+                        p {
+                            font-size: rem(20px);
+                            color: #888;
+                        }
+                    }
+                }
+                .copy-list {
+                    li {
+                        display: table;
+                        width: 100%;
+                        @extend %clearfix;
+                        div {
+                            display: table-cell;
+                            &:first-child {
+                                width: 64px;
+                                text-align: center;
+                                [class^="lable-"] {
+                                    @include btn($width: 64px, $height: 28px, $radius: 6px);
+                                    font-size: rem(18px);
+                                }
+                            }
+                            &:last-child {
+                                font-size: rem(20px);
+                                color: #888;
+                                text-align: justify;
+                                padding-left: 18px;
+                            }
+                        }
+                    }
+                }
+                .text-list {
+                    @extend .copy-list;
+                    h2 {
+                        line-height: 1.5;
+                        margin-top: 27px;
+                        margin-bottom: 13px;
+                        span {
+                            color: #fc4033;
+                        }
+                    }
+                    p {
+                        font-size: rem(20px);
+                        color: #888;
+                        text-align: justify;
+                    }
                 }
             }
         }
