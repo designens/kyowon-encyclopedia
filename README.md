@@ -1,5 +1,5 @@
 # 교원 빨간펜 스마트 라이브러리
-(Hybtid Web Publishing)
+(Hybrid Web Publishing)
 
 ## Framework 구축
  - Sass
